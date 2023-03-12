@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20230312
+      author: Ibrahim Qarayev
+      changes:
+        - createTable:
+            tableName: payments
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoincrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: amount
+                  type: numeric(16,2)
+                  constraints:
+                    nullable:false
+              - column:
+                  name: description
+                  type: text
