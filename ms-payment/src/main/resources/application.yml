@@ -1,12 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/mspayment
+    url: jdbc:postgresql://localhost:5432/ms_payments
     username: postgres
     password: admin
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
 
   liquibase:
     change-log: classpath:liquibase/changelog-master.yml
